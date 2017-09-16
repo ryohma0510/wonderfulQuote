@@ -41,7 +41,7 @@
         text-align: center;
         line-height: 200%;
         border-radius: 20px;
-        background-color: rgba(77, 77, 208, 0.62);
+        background-color: rgba(3, 169, 244,0.44);
         position: absolute;
     }
 </style>
