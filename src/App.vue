@@ -1,7 +1,7 @@
 <template>
     <div id="app">
-        <app-header></app-header>
-        <app-quote-form></app-quote-form>
+        <app-header :quotesNumber="quotes.length"></app-header>
+        <app-quote-form  @quoteWasAdded="quotes.push($event)"></app-quote-form>
         <div id="quote-cards">
             <app-quote-card v-for="quote in quotes" :quote="quote"></app-quote-card>
         </div>

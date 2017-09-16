@@ -2,7 +2,7 @@
     <div id="header">
         <h2>Quotes Added</h2>
         <div id="bar-box">
-            <p>{{ quoteCounter }} / 10</p>
+            <p>{{ quotesNumber }} / 10</p>
             <div id="bar" :style="{width: barWidth}"></div>
         </div>
 
@@ -11,14 +11,10 @@
 
 <script>
     export default {
-        data () {
-            return {
-                quoteCounter: 0
-            }
-        },
+        props: ['quotesNumber'],
         computed: {
             barWidth () {
-                return (this.quoteCounter * 10).toString() + '%'
+                return (this.quotesNumber * 10).toString() + '%'
             }
         }
     }

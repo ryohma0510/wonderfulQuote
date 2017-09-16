@@ -2,7 +2,6 @@
     <div id="quote-form">
         <h3>Quote</h3>
         <textarea v-model="inputQuote"></textarea>
-        {{ inputQuote }}
         <button @click="addQuote">Add Quote</button>
     </div>
 </template>
@@ -12,6 +11,12 @@
         data () {
             return {
                 inputQuote: ''
+            }
+        },
+        methods: {
+            addQuote () {
+                this.$emit('quoteWasAdded', this.inputQuote)
+                this.inputQuote = ''
             }
         }
     }
