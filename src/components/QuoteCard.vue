@@ -1,12 +1,12 @@
 <template>
     <div id="quote-card" @click="deleteCard()">
-        <p>{{ quote }}</p>
+        <slot></slot>
     </div>
 </template>
 
 <script>
     export default {
-        props: ['quote', 'quoteId'],
+        props: ['quoteId'],
         methods: {
             deleteCard () {
                 this.$emit('cardWasClicked', this.quoteId)

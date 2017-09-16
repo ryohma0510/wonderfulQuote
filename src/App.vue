@@ -12,7 +12,7 @@
             v-for="(quote, index) in quotes" :quote="quote"
             :quoteId="index"
             @cardWasClicked="quotes.splice($event, 1)"
-            ></app-quote-card>
+            ><p>{{ quote }}</p></app-quote-card>
         </div>
         <app-footer></app-footer>
     </div>
