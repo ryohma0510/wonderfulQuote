@@ -1,7 +1,7 @@
 <template>
     <div id="app">
         <app-header :quotesNumber="quotes.length"></app-header>
-        <app-quote-form  @quoteWasAdded="quotes.push($event)"></app-quote-form>
+        <app-quote-form  @quoteWasAdded="quotes.push($event)" :quotesNumber="quotes.length"></app-quote-form>
         <div id="quote-cards">
             <app-quote-card v-for="quote in quotes" :quote="quote"></app-quote-card>
         </div>
@@ -19,7 +19,7 @@
     export default {
         data () {
             return {
-                quotes: ['great', 'wonderful', 'excellent']
+                quotes: []
             }
         },
         components: {

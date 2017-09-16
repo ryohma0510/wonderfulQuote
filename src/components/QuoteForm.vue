@@ -8,6 +8,7 @@
 
 <script>
     export default {
+        props: ['quotesNumber'],
         data () {
             return {
                 inputQuote: ''
@@ -15,8 +16,16 @@
         },
         methods: {
             addQuote () {
-                this.$emit('quoteWasAdded', this.inputQuote)
-                this.inputQuote = ''
+                if (this.inputQuote !== '') {
+                    if (this.quotesNumber < 10) {
+                        this.$emit('quoteWasAdded', this.inputQuote)
+                        this.inputQuote = ''
+                    } else {
+                        alert('Quotes was already added over 10. Please delete some quotes with cliclking')
+                    }
+                } else {
+                    alert('Pleade tyoe wonderful quote!')
+                }
             }
         }
     }
