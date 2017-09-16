@@ -23,8 +23,13 @@
         margin: 10px 10px 0 0;
         display: inline-block;
         cursor: pointer;
+        &:hover {
+            background-color: rgba(3, 169, 244,0.44);
+        }
     }
+
     p {
-        font-style: italic;
+        font-family: 'Arizonia', cursive;
+        font-size: 40px;
     }
 </style>

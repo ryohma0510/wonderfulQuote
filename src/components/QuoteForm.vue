@@ -1,7 +1,7 @@
 <template>
     <div id="quote-form">
         <h3>Quote</h3>
-        <textarea v-model="inputQuote"></textarea>
+        <textarea rows="3" v-model="inputQuote"></textarea>
         <button @click="addQuote">Add Quote</button>
     </div>
 </template>
@@ -38,7 +38,7 @@
         text-align: center;
         textarea {
             width: 100%;
-            height: 70px;
+            font-size: 24px;
         }
     }
     button {
