@@ -1,9 +1,18 @@
 <template>
     <div id="app">
-        <app-header :quotesNumber="quotes.length"></app-header>
-        <app-quote-form @quoteWasAdded="quotes.push($event)" :quotesNumber="quotes.length"></app-quote-form>
+        <app-header
+            :quotesNumber="quotes.length"
+            ></app-header>
+        <app-quote-form
+            @quoteWasAdded="quotes.push($event)"
+            :quotesNumber="quotes.length"
+            ></app-quote-form>
         <div id="quote-cards">
-            <app-quote-card v-for="(quote, index) in quotes" :quote="quote" :quoteId="index" @cardWasClicked="quotes.splice($event, 1)"></app-quote-card>
+            <app-quote-card
+            v-for="(quote, index) in quotes" :quote="quote"
+            :quoteId="index"
+            @cardWasClicked="quotes.splice($event, 1)"
+            ></app-quote-card>
         </div>
         <app-footer></app-footer>
     </div>
