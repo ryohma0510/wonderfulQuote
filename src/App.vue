@@ -1,6 +1,6 @@
 <template>
     <div id="app">
-        <header></header>
+        <app-header></app-header>
         <div class="quote-form"></div>
         <div class="quote-cards"></div>
         <footer></footer>
@@ -8,6 +8,13 @@
 </template>
 
 <script>
+    import Header from './components/Header.vue'
+
+    export default {
+        components: {
+            appHeader: Header
+        }
+    }
 
 </script>
 
