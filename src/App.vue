@@ -3,7 +3,7 @@
         <app-header></app-header>
         <app-quote-form></app-quote-form>
         <div id="quote-cards">
-            <app-quote-card v-for="n in 10"></app-quote-card>
+            <app-quote-card v-for="quote in quotes" :quote="quote"></app-quote-card>
         </div>
         <app-footer></app-footer>
     </div>
@@ -17,6 +17,11 @@
 
 
     export default {
+        data () {
+            return {
+                quotes: ['great', 'wonderful', 'excellent']
+            }
+        },
         components: {
             appHeader: Header,
             appQuoteForm: QuoteForm,
