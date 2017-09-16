@@ -5,7 +5,7 @@
         <div id="quote-cards">
             <app-quote-card v-for="n in 10"></app-quote-card>
         </div>
-        <footer></footer>
+        <app-footer></app-footer>
     </div>
 </template>
 
@@ -13,12 +13,15 @@
     import Header from './components/Header.vue'
     import QuoteForm from './components/QuoteForm.vue'
     import QuoteCard from './components/QuoteCard.vue'
+    import Footer from './components/Footer.vue'
+
 
     export default {
         components: {
             appHeader: Header,
             appQuoteForm: QuoteForm,
-            appQuoteCard: QuoteCard
+            appQuoteCard: QuoteCard,
+            appFooter: Footer
         }
     }
 
@@ -27,5 +30,8 @@
 <style lang="scss">
     #app {
         margin: 0 10%;
+    }
+    #quote-cards {
+        margin-top: 20px;
     }
 </style>
