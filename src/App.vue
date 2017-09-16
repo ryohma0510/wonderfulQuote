@@ -1,9 +1,9 @@
 <template>
     <div id="app">
         <app-header></app-header>
-        <quote-form></quote-form>
+        <app-quote-form></app-quote-form>
         <div id="quote-cards">
-            <quote-card v-for="n in 10"></quote-card>
+            <app-quote-card v-for="n in 10"></app-quote-card>
         </div>
         <footer></footer>
     </div>
@@ -17,8 +17,8 @@
     export default {
         components: {
             appHeader: Header,
-            quoteForm: QuoteForm,
-            quoteCard: QuoteCard
+            appQuoteForm: QuoteForm,
+            appQuoteCard: QuoteCard
         }
     }
 
