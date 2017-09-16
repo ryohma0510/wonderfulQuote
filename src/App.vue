@@ -1,7 +1,7 @@
 <template>
     <div id="app">
         <app-header></app-header>
-        <div class="quote-form"></div>
+        <quote-form></quote-form>
         <div class="quote-cards"></div>
         <footer></footer>
     </div>
@@ -9,10 +9,12 @@
 
 <script>
     import Header from './components/Header.vue'
+    import QuoteForm from './components/QuoteForm.vue'
 
     export default {
         components: {
-            appHeader: Header
+            appHeader: Header,
+            quoteForm: QuoteForm
         }
     }
 
